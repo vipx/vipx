@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>旅游图记</title>
+		<link rel="stylesheet" href="res/diquick/css/diquick.min.css">
+		<link rel="stylesheet" href="res/diquick/js/fancybox/jquery.fancybox.css">
+		<link rel="stylesheet" href="res/layui/css/layui.css">
+
+		<style>
+			.bg-gray {
+				background-color: #eee;
+			}
+			
+			.logoimg {
+				height: 53px;
+			}
+			
+			.logoimg-s {
+				height: 38px;
+			}
+			
+			.cursored {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- header begin -->
+			<div id="header">
+				<!-- nav begin -->
+				<div id="nav" class="shell bg-gray">
+					<div class="menu drop">
+						<div class="cursored">
+							<img class="radius logoimg hide-s" src="res/imgs/xiaozhuo.web.png" alt="XIAOZHUO.WANG™" onclick="(window.location.href='//xiaozhuo.wang');" />
+							<img class="radius logoimg-s hide show-s" src="res/imgs/xiaozhuo.web.png" alt="XIAOZHUO.WANG™" onclick="(window.location.href='//xiaozhuo.wang');" />
+						</div>
+						<div class="hide-s">
+							<a href="#"><i class="flaticon-home140"></i>首页</a>
+						</div>
+						<div class="hide-s">
+							<a href="#"><i class="flaticon-personal29"></i>我...</a>
+						</div>
+						<div class="hide-s">
+							<a href="#"><i class="flaticon-information58"></i>关于</a>
+						</div>
+						<div data-click="togglenavigation" class="hide show-s fr cursored">
+							<i class="flaticon-four92 fs9"></i>
+						</div>
+					</div>
+				</div>
+				<!-- nav end -->
+				<!-- toggle-nav begin -->
+				<div id="togglenavigation" class="toggle-nav fixed">
+					<div class="menu accordion">
+						<div>
+							<a href="#"><span class="flaticon-home140"></span>主页</a>
+						</div>
+						<div>
+							<a href="#"><span class="flaticon-personal29"></span>我...</a>
+						</div>
+						<div>
+							<a href="#"><span class="flaticon-information58"></span>关于</a>
+						</div>
+					</div>
+					<i data-close="togglenavigation" class="flaticon-cross89 fs6"></i>
+				</div>
+				<!-- toggle-nav end -->
+			</div>
+			<!-- header end -->
+			<!-- content begin -->
+			<div id="content" class="main shell">
+				<h1>Hello!</h1>
+			</div>
+			<!-- content end -->
+			<!-- footer begin -->
+			<div id="footer" class="footer shell">
+				<p class="mb0">
+					本站部分资源来源网络，如有侵犯，请及时告知，感谢您的理解与支持！
+				</p>
+				<p class="fs1 c-999">Copyright &copy; 2016 XIAOZHUO.WANG&trade;</p>
+			</div>
+			<!-- footer end -->
+		</div>
+
+		<div id="script">
+			<script src="res/diquick/js/jquery.js"></script>
+			<script src="res/diquick/js/diquick.js"></script>
+			<script src="res/diquick/js/fancybox/jquery.fancybox.pack.js"></script>
+			<script src="res/layui/layui.js"></script>
+			<script>
+				layui.config({
+					debug: true, //用于开启调试模式，默认false，如果设为true，则JS模块的节点会保留在页面
+				});
+				//一般直接写在一个js文件中
+				layui.use(['layer', 'form'], function() {
+					var layer = layui.layer,
+						form = layui.form();
+					layer.msg('Hello World');
+				});
+			</script>
+		</div>
+	</body>
+
+</html>
